@@ -35,7 +35,7 @@
     />
   </head>
   <body>
-    <div class="kindshare">
+    <div class="kindshare" id="kindshare">
       <img class="bg-gray-icon" alt="" src="./public/bggray.svg" />
 
       <div class="navs">
@@ -54,11 +54,13 @@
               src="./public/akariconschevrondown.svg"
             />
           </div>
-          <div class="home">About</div>
+          <div class="home" id="about-link">About</div>
           <div class="home">Contact</div>
         </div>
         <div class="button">
-          <div class="home">Donate now</div>
+          <a href="Nav1/index.html" class="home-1" style="text-decoration: none"
+            >Donate now</a
+          >
         </div>
         <img
           class="screenshot-2023-08-04-at-1253"
@@ -72,10 +74,15 @@
         <div class="content">
           <div class="button-row">
             <div class="primary-button">
-              <b class="primary-button-text">Join as a volunteer</b>
+              <a href="Nav1/index.html" class="home-1" style="text-decoration:none">Join as a volunteer</a>
             </div>
             <div class="secondary-button">
-              <b class="primary-button-text">Donate</b>
+              <a
+                href="Nav1/index.html"
+                class="primary-button-text"
+                style="text-decoration: none"
+                >Donate</a
+              >
             </div>
           </div>
           <div class="you-can-contribute">
@@ -152,7 +159,7 @@
       <div class="landing-section">
         <div class="landing-section-child"></div>
         <div class="button1">
-          <div class="home">view services</div>
+          <a href="Nav1/index.html" class="home-1" style="text-decoration:none" >view services</a>
         </div>
         <div class="community-contribution-platfor-container">
           <p class="community-contribution">Community Contribution</p>
@@ -260,7 +267,7 @@
           </div>
         </div>
       </div>
-      <div class="aboutus-section">
+      <div class="aboutus-section" id="about-1">
         <img
           class="aboutus-section-child"
           alt=""
@@ -292,7 +299,7 @@
           <div class="frame-group">
             <div class="frame-container">
               <div class="about-us-parent">
-                <div class="explore">Home</div>
+                <div class="explore" id="homego">Home</div>
                 <div class="explore">About</div>
                 <div class="explore">Services</div>
                 <div class="explore">Volunteers</div>
@@ -344,12 +351,35 @@
               <img
                 class="screenshot-2023-08-04-at-12531"
                 alt=""
-                src="./public/screenshot-20230804-at-1253-11@2x.png"
+                src="./public/screenshot-20230804-at-1253-1@2x.png"
               />
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- i have added js in here only to connect to another class -->
+    <script>
+      // Get a reference to the "Home" button
+      const homeButton = document.getElementById("homego");
+
+      // Get a reference to the <div class="kindshare"> element
+      const kindshareDiv = document.getElementById("kindshare");
+
+      // Add a click event listener to the "Home" button
+      homeButton.addEventListener("click", () => {
+        // Scroll to the <div class="kindshare"> element
+        kindshareDiv.scrollIntoView({ behavior: "smooth" });
+      });
+      // Get the "About" link element
+      const aboutLink = document.getElementById("about-link");
+      const about1 = document.getElementById("about-1");
+
+      // Add a click event listener to the "About" link
+      aboutLink.addEventListener("click", () => {
+        // Scroll to the <div class="kindshare"> element
+        about1.scrollIntoView({ behavior: "smooth" });
+      });
+    </script>
   </body>
 </html>
